@@ -18,7 +18,7 @@ from sklearn.impute import SimpleImputer
 # imputation
 my_imputer = SimpleImputer()
 imputed_x_train = pd.DataFrame(my_imputer.fit_transform(x_train))
-imputed_x_val = pd.DataFrame(my_imputer.fit_transform(x_val))
+imputed_x_val = pd.DataFrame(my_imputer.transform(x_val))
 
 # imputation removed column names, put them back
 imputed_x_train.columns = x_train.columns
@@ -40,7 +40,7 @@ for col in cols_with_missing:
 # imputation
 my_imputer = SimpleImputer()
 imputed_x_train_plus = pd.DataFrame(my_imputer.fit_transform(x_train_plus))
-imputed_x_val_plus = pd.DataFrame(my_imputer.fit_transform(x_val_plus))
+imputed_x_val_plus = pd.DataFrame(my_imputer.transform(x_val_plus))
 
 # imputation removed column names , put them back
 imputed_x_train_plus.columns = x_train_plus.columns
