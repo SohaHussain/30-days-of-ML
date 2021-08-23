@@ -37,7 +37,7 @@ x_train,x_valid,y_train,y_valid = train_test_split(x,y)
 # implementation of gradient boosting with several additional features focused on performance and speed. 
 # (Scikit-learn has another version of gradient boosting, but XGBoost has some technical advantages.
 
-from XGboost import XGBRegressor
+from xgboost import XGBRegressor
 
 my_model = XGBRegressor()
 my_model.fit(x_train,y_train)
